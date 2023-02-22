@@ -1,0 +1,63 @@
+<div class="container-xxl">
+    <div class="authentication-wrapper authentication-basic container-p-y">
+        <div class="authentication-inner vh-100 align-items-center d-flex justify-content-center">
+            <!-- Register -->
+            <div class="card">
+                <div class="card-body">
+                    <!-- Logo -->
+                    <div class="app-brand justify-content-center">
+                        <a href="index.html" class="app-brand-link gap-2">
+                            <span class="app-brand-logo demo">
+                                <img src="assets/img/our/site_favicon_16_1609536578639.ico" alt="">
+                            </span>
+                            <span class="app-brand-text demo text-body fw-bolder">Couvoir Amar</span>
+                        </a>
+                    </div>
+                    <!-- /Logo -->
+                    <hr>
+                    <h4 class="mb-2">Bienvenue sur SouvoirSuivie! 👋</h4>
+                    <p class="mb-4">Merci de renseigner un login et un mot de passe correct</p>
+
+                    <form [formGroup]="reactiveForm_add_agents " (ngSubmit)="onSubmit_add_agents ()"
+                        #form_add_agents="ngForm" class="row" id="formAuthentication" class="mb-3">
+                        <div class="mb-3">
+                            <label for="login" class="form-label">Login</label>
+                            <input id="login" class="form-control" type="text" formControlName="login"
+                                placeholder="login" [ngClass]="{ 'is-invalid': submitted && f.login.errors }"
+                                autofocus />
+                            <div *ngIf="submitted && f.login.errors" class="invalid-feedback">
+                                <div *ngIf="f.login.errors.required"> login est obligatoire </div>
+                            </div>
+                        </div>
+                        <div class="mb-3 form-password-toggle">
+                            <div class="d-flex justify-content-between">
+                                <label class="form-label" for="password">Mot de passe</label>
+                                <!-- <a href="auth-forgot-password-basic.html">
+                                    <small>Forgot Password?</small>
+                                </a> -->
+                            </div>
+                            <div class="input-group input-group-merge">
+                                <input type="password" id="password" class="form-control" name="password" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;" aria-describedby="password" formControlName="pwd" [ngClass]="{ 'is-invalid': submitted && f.pwd.errors }" />
+                                <span class="input-group-text cursor-pointer" (click)="toggle_password_button()"><i class="bx bx-hide"></i></span>
+                                <div *ngIf="submitted && f.pwd.errors" class="invalid-feedback">
+                                    <div *ngIf="f.pwd.errors.required"> Le mot de passe est obligatoire </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <button class="btn btn-primary d-grid w-100" [disabled]="loading_add_agents" >{{loading_add_agents ?"En cours ...":"Seconnecter"}}</button>
+                        </div>
+                    </form>
+
+                    <p class="text-center">
+                        <span>New on our platform?</span>
+                        <a href="auth-register-basic.html">
+                            <span>Create an account</span>
+                        </a>
+                    </p>
+                </div>
+            </div>
+            <!-- /Register -->
+        </div>
+    </div>
+</div>

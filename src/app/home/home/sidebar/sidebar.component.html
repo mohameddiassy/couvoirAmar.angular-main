@@ -1,0 +1,154 @@
+<aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
+    <div class="app-brand demo">
+        <img src="assets/img/our/logo.webp" alt="">
+        <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
+            <i class="bx bx-chevron-left bx-sm align-middle"></i>
+        </a>
+    </div>
+
+    <div class="menu-inner-shadow"></div>
+
+    <ul class="menu-inner py-1">
+        <li class="menu-header small text-uppercase">
+            <span class="menu-header-text">Administration</span>
+        </li>
+        <!-- Dashboard -->
+        <li class="menu-item" [routerLinkActive]="'active'">
+            <a [routerLink]="['/home/dashboard']" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-home-circle"></i>
+                <div data-i18n="Analytics">Tableau de bord</div>
+            </a>
+        </li>
+
+        <!-- Layouts -->
+        <li class="menu-item" [routerLinkActive]="'active'">
+            <a [routerLink]="['/home/utilisateur']" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons bx bx-layout"></i>
+                <div data-i18n="Layouts">Utilisateur</div>
+            </a>
+
+            <ul class="menu-sub">
+                <li class="menu-item">
+                    <a [routerLink]="['/home/utilisateur']" class="menu-link">
+                        <div data-i18n="Without menu">Liste des utilisateur</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="layouts-without-navbar.html" class="menu-link">
+                        <div data-i18n="Without navbar">Agents</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="layouts-container.html" class="menu-link">
+                        <div data-i18n="Container">Comptable</div>
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+        <li class="menu-header small text-uppercase">
+            <span class="menu-header-text">Collectes</span>
+        </li>
+        <li class="menu-item" [routerLinkActive]="'active'">
+            <a [routerLink]="['/home/collecte']" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons bx bx-dock-top"></i>
+                <div data-i18n="Account Settings">Collectes</div>
+            </a>
+            <ul class="menu-sub">
+                <li class="menu-item">
+                    <a href="pages-account-settings-account.html" class="menu-link">
+                        <div data-i18n="Account">Toutes les collectes</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="pages-account-settings-account.html" class="menu-link">
+                        <div data-i18n="Account">Collectes validées</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="pages-account-settings-account.html" class="menu-link">
+                        <div data-i18n="Account">Statistique</div>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="menu-item" [routerLinkActive]="'active'">
+            <a [routerLink]="['/home/formulaire']" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons bx bx-cube-alt"></i>
+                <div data-i18n="Misc">Formulaires</div>
+            </a>
+            <ul class="menu-sub">
+                <li class="menu-item">
+                    <a href="pages-misc-error.html" class="menu-link">
+                        <div data-i18n="Error">model grobal</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="pages-misc-under-maintenance.html" class="menu-link">
+                        <div data-i18n="Under Maintenance">Model hiver</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="pages-misc-under-maintenance.html" class="menu-link">
+                        <div data-i18n="Under Maintenance">Model été</div>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="menu-header small text-uppercase">
+            <span class="menu-header-text">Production</span>
+        </li>
+        <li class="menu-item" [routerLinkActive]="'active'">
+            <a [routerLink]="['/home/lot']" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons bx bx-lock-open-alt"></i>
+                <div data-i18n="Authentications">Lots</div>
+            </a>
+            <ul class="menu-sub">
+                <li class="menu-item">
+                    <a href="auth-login-basic.html" class="menu-link" target="_blank">
+                        <div data-i18n="Basic">Liste des lots</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="auth-register-basic.html" class="menu-link" target="_blank">
+                        <div data-i18n="Basic">2023</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="auth-forgot-password-basic.html" class="menu-link" target="_blank">
+                        <div data-i18n="Basic">2022</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="auth-forgot-password-basic.html" class="menu-link" target="_blank">
+                        <div data-i18n="Basic">2021</div>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <!-- User interface -->
+        <li class="menu-item" [routerLinkActive]="'active'">
+            <a [routerLink]="['/home/fournisseur']" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons bx bx-box"></i>
+                <div data-i18n="User interface">Fournisseur</div>
+            </a>
+            <ul class="menu-sub">
+                <li class="menu-item">
+                    <a href="ui-accordion.html" class="menu-link">
+                        <div data-i18n="Accordion">Liste des fournisseurs</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="ui-alerts.html" class="menu-link">
+                        <div data-i18n="Alerts">Toutes les années</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="ui-badges.html" class="menu-link">
+                        <div data-i18n="Badges">2023</div>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</aside>
